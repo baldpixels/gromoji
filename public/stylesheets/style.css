@@ -8,6 +8,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: monospace;
+  overflow: hidden;
 }
 
 a {
@@ -25,76 +26,116 @@ article {
 }
 
 h1 {
-
+  font-weight: normal;
+  text-decoration: underline;
 }
 
 h2 {
-
+  font-weight: normal;
+  font-size: 1em;
 }
 
 p {
 
 }
 
+button {
+  border: none;
+  font-size: 1em;
+  font-family: monospace;
+  background-color: #fff;
+  color: #000;
+}
+
+button:active {
+  background-color: #f0f0d0;
+}
 
 /*
 *
 */
+#command_palette {
+  position: fixed;
+  top: 33vh;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 2em 1em 2em 1em;
+  background-color: #429255;
+  color: #fff;
+  display: grid;
+  grid-template-columns: 9em  9em  9em;
+  grid-template-rows: 4.5em
+}
+
+.command {
+  padding: 0;
+  margin: 0;
+  width: 7em;
+  height: 4.5em;
+  background-color: #fff;
+  color: #000;
+  display: grid;
+  text-align: center;
+  align-items: center;
+  justify-self: center;
+}
+
 #sky {
-  padding: 3em;
+  width: 100%;
+  height: 33vh;
 }
 
 #clock {
-  padding: .5em 0 0 0;
+  height: 100%;
   width: 100%;
+  padding: 0;
+  margin: 0;
   text-align: center;
   font-size: 5em;
-}
-
-#garden_name {
-  font-size: 1.5em;
+  display: grid;
+  grid-template-columns: 100vw;
   text-align: center;
+  align-items: center;
+  justify-self: center;
 }
 
 /*
 *
 */
 #land {
-  height: auto;
-  display: grid;
-  grid-template-columns: 100vw;
-  grid-row-gap: 3em;
-  align-items: center;
-  align-content: center;
+  width: 100%;
+  height: 67vh;
+  overflow-y: scroll;
 }
 
 .field {
-  width: 30vh;
-  height: 30vh;
-  padding: 1em;
-  margin: 3em auto 3em auto;
+  width: 17em;
+  height: 17em;
+  padding: 0;
+  margin: 9em auto 9em auto;
   display: grid;
-  grid-template-columns: 30% 30% 30%;
-  grid-row-gap: .5em;
-  grid-column-gap: .5em;
+  grid-template-columns: 3em 3em 3em;
+  grid-template-rows: 3em 3em 3em;
+  grid-gap: 4em;
+  text-align: center;
   align-items: center;
-  align-content: center;
+  justify-self: center;
 }
 
 .plot {
-  width: 9vh;
-  height: 9vh;
+  font-size: 2em;
+  width: 3em;
+  height: 3em;
   margin: 0;
   padding: 0;
-  background-color: #504344;
   display: grid;
   text-align: center;
-  font-size: 2em;
   align-items: center;
+  justify-self: center;
 }
 
 .plot:hover {
-  background-color: #f0f0f0;
+  background-color: #fff;
 }
 
 
@@ -135,4 +176,48 @@ p {
 
 .title {
   text-decoration: underline;
+}
+
+#catalog {
+  box-sizing: border-box;
+  position: fixed;
+  visibility: hidden;
+  top: 66vh;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 21em;
+  height: 21em;
+  padding: 1em;
+  background-color: #fff;
+  z-index: +1;
+}
+
+#soundtrack {
+  position: fixed;
+  bottom: 0;
+  width:100%;
+  text-align: center;
+  display: grid;
+  text-align: center;
+  align-items: center;
+  justify-self: center;
+  background-color: #429255;
+  color: #fff;
+}
+
+#soundtrack p {
+ font-size: 1em;
+}
+
+#soundtrack iframe {
+  margin: 0 auto 0 auto;
+  background-color: #f0f0f0;
+}
+
+#soundtrack a {
+
+}
+
+#soundtrack a:hover {
+
 }

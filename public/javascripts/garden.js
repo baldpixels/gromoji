@@ -27,31 +27,43 @@ $(document).ready(function() {
   var clock = $("#clock");
   var sky = $("#sky");
   var land = $("#land");
+  var plot = $(".plot");
   var almanac = $("#almanac");
+  var catalog = $("#catalog")
 
-  almanac.css("visibility", "hidden");
+  function hideCatalog() {
+    catalog.css("visibility", "hidden");
+  }
+
+  function showCatalog() {
+    catalog.css("visibility", "visible");
+  }
 
   function updateFields() {
     //new plant Object
-    $("#plot5").html(seedlingIcon);
+    for(i=1; i<10; i++) {
+      $("#plot" + i).html(seedlingIcon);
+    }
   }
 
   function updateLand() {
     if(day) {
-      land.css("background-color", "#512033");
+      land.css("background-color", "#644e25");
+      plot.css("background-color", "#47381a");
       land.css("color", "#000");
     } else if (night) {
-      land.css("background-color", "#313033");
+      land.css("background-color", "#2b2119");
+      plot.css("background-color", "#1c160b");
       land.css("color", "#fff");
     }
   }
 
   function updateSky() {
     if(day) {
-      sky.css("background-color", "#fff");
+      sky.css("background-color", "#5cb8e1");
       sky.css("color", "#000");
     } else if (night) {
-      sky.css("background-color", "#000");
+      sky.css("background-color", "#071b24");
       sky.css("color", "#fff");
     }
   }
